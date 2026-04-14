@@ -9,6 +9,8 @@
 
         button.textContent = isLight ? "☀️" : "🌙";
         button.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+        // Expose the current toggle state for assistive technologies.
+        button.setAttribute("aria-pressed", isLight ? "true" : "false");
     }
 
     function applyTheme(theme) {
