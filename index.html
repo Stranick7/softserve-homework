@@ -1,27 +1,67 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Команда SoftServe</title>
+    <title>MBVS Team</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <h2 class="nav-title">SoftServe Team</h2>
-            <ul  class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="denisyuk.html">Денисюк</a></li>
-                <li><a href="Dunak.html">Дунак</a></li>
-                <li><a href="kazinskiy.html">Казінський</a></li>
-                <li><a href="drukachuk.html">Дручачук</a></li>
+            <h2 class="nav-title">MBVS Team</h2>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="denisyuk.html">Denysiuk</a></li>
+                <li><a href="Dunak.html">Dunak</a></li>
+                <li><a href="kazinskiy.html">Kazinskiy</a></li>
+                <li><a href="drukachuk.html">Drukachuk</a></li>
             </ul>
         </div>
     </nav>
-    <section class="team-section">
-        <h1>Команда MBVS</h1>
-        <p>Ми - команда талановитих розробників SoftServe, які працюють над інноваційними проектами. Наша мета - створювати якісне програмне забезпечення, що змінює світ на краще.</p>
-    </section>
+
+    <main>
+        <section class="hero-section" aria-labelledby="hero-title">
+            <h1 id="hero-title">MBVS Team</h1>
+            <p>
+                We are a student engineering group focused on C++ development and software architecture,
+                building reliable systems and strong problem-solving skills through practical collaboration.
+            </p>
+        </section>
+
+        <section class="members-section" aria-labelledby="members-title">
+            <h2 id="members-title">Team Members</h2>
+            <div class="members-grid">
+                <article class="member-card">
+                    <h3>Oleksandr Denysiuk</h3>
+                    <p>Captain • C++ Developer</p>
+                    <a class="btn-primary" href="denisyuk.html">View Profile</a>
+                </article>
+
+                <article class="member-card">
+                    <h3>Vitalii Dunak</h3>
+                    <p>Student • C++ Learner</p>
+                    <a class="btn-primary" href="Dunak.html">View Profile</a>
+                </article>
+
+                <article class="member-card">
+                    <h3>Bohdan Kazinskiy</h3>
+                    <p>Student • Software Development</p>
+                    <a class="btn-primary" href="kazinskiy.html">View Profile</a>
+                </article>
+
+                <article class="member-card">
+                    <h3>Mykola Drukachuk</h3>
+                    <p>Student • Backend Foundations</p>
+                    <a class="btn-primary" href="drukachuk.html">View Profile</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="home-footer">
+        <p>Project Repository</p>
+        <a class="btn-primary" href="https://github.com/Stranick7/softserve-homework" target="_blank" rel="noopener noreferrer">Open on GitHub</a>
+    </footer>
 </body>
 </html>

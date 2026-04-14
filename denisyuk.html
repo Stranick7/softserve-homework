@@ -2,25 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Information about Denisyuk O.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleksandr Denysiuk – Profile</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #2b2b2b;
-            color: #ffffff;
+        .profile-main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem 2rem;
+        }
+
+        .profile-header {
             text-align: center;
-            padding-top: 100px;
+            margin-bottom: 2rem;
         }
-        h1 {
-            color: #4CAF50;
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: #00d4ff;
         }
-        p {
-            font-size: 18px;
+
+        .profile-header p {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            color: #cccccc;
+        }
+
+        .profile-section {
+            background-color: #262626;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-section h2 {
+            margin-top: 0;
+            color: #00d4ff;
+        }
+
+        .profile-section p {
+            margin-bottom: 0;
+            color: #dddddd;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: #1f1f1f;
+            border: 1px solid #3a3a3a;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .skill-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        .skill-card p {
+            margin: 0;
+            color: #c8c8c8;
+            font-size: 0.95rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00a7cc;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            background-color: #0088a6;
+        }
+
+        .page-footer {
+            text-align: center;
+            padding: 0 1rem 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello, my name is Oleksandr!</h1>
-    <p>It's my personal page for team project SoftServe.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-title">MBVS Team</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="denisyuk.html" class="active" aria-current="page">Denysiuk</a></li>
+                <li><a href="Dunak.html">Dunak</a></li>
+                <li><a href="kazinskiy.html">Kazinskiy</a></li>
+                <li><a href="drukachuk.html">Drukachuk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="profile-main profile-header">
+        <h1>Oleksandr Denysiuk</h1>
+        <p>C++ Developer | Student at KNU</p>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-section" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>
+                I am 19 years old, based in Zhytomyr, and currently studying at Taras Shevchenko National
+                University of Kyiv, Faculty of Computer Science and Cybernetics. I am passionate about
+                low-level programming, system architecture design, and building efficient software solutions.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Advanced C++</h3>
+                    <p>Strong command of pointers, references, and dynamic memory management for high-performance applications.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Core Concepts</h3>
+                    <p>Solid understanding of variables, loops, and recursion as a foundation for algorithmic problem-solving.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Database Management</h3>
+                    <p>Hands-on experience with data modeling and working with database management systems in practical projects.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Java and Python</h3>
+                    <p>Working knowledge of Java and Python for academic assignments and entry-level application development.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <p>Explore the main repository of our team:</p>
+            <a href="https://github.com/Stranick7/softserve-homework" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <a class="back-button" href="index.html">Back to Team</a>
+    </footer>
 </body>
 </html>
