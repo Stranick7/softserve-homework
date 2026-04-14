@@ -15,6 +15,7 @@
     --color-text-soft: #d6d6d6;
     --color-text-subtle: #c9c9c9;
     --color-text-footer: #cfcfcf;
+    --color-btn-text: #ffffff;
     --color-btn-border: #0f8f9e;
     --color-btn-gradient-start: #0fa3b1;
     --color-btn-gradient-end: #0b7f8c;
@@ -45,6 +46,7 @@
     --color-text-soft: #395160;
     --color-text-subtle: #4a6170;
     --color-text-footer: #3e5563;
+    --color-btn-text: #ffffff;
     --color-btn-border: #0c8696;
     --color-btn-gradient-start: #12a6b5;
     --color-btn-gradient-end: #0f8a99;
@@ -138,7 +140,7 @@ body {
     border-radius: 8px;
     border: 1px solid var(--color-btn-border);
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-btn-text);
     background: linear-gradient(135deg, var(--color-btn-gradient-start), var(--color-btn-gradient-end));
     font-weight: 600;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
