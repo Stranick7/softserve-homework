@@ -20,18 +20,18 @@
         .profile-header h1 {
             margin: 0;
             font-size: 2.4rem;
-            color: #00d4ff;
+            color: var(--color-accent);
         }
 
         .profile-header p {
             margin-top: 0.6rem;
             font-size: 1.1rem;
-            color: #cccccc;
+            color: var(--color-text-muted);
         }
 
         .profile-section {
-            background-color: #262626;
-            border: 1px solid #333333;
+            background-color: var(--color-surface-panel);
+            border: 1px solid var(--color-border);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
@@ -39,12 +39,12 @@
 
         .profile-section h2 {
             margin-top: 0;
-            color: #00d4ff;
+            color: var(--color-accent);
         }
 
         .profile-section p {
             margin-bottom: 0;
-            color: #dddddd;
+            color: var(--color-text-soft);
         }
 
         .skills-grid {
@@ -54,8 +54,8 @@
         }
 
         .skill-card {
-            background-color: #1f1f1f;
-            border: 1px solid #3a3a3a;
+            background-color: var(--color-surface-skill);
+            border: 1px solid var(--color-border-strong);
             border-radius: 10px;
             padding: 1rem;
         }
@@ -63,13 +63,13 @@
         .skill-card h3 {
             margin-top: 0;
             margin-bottom: 0.5rem;
-            color: #ffffff;
+            color: var(--color-text);
             font-size: 1.05rem;
         }
 
         .skill-card p {
             margin: 0;
-            color: #c8c8c8;
+            color: var(--color-text-subtle);
             font-size: 0.95rem;
         }
 
@@ -79,14 +79,14 @@
             padding: 0.65rem 1.1rem;
             border-radius: 8px;
             text-decoration: none;
-            color: #ffffff;
-            background-color: #00a7cc;
+            color: var(--color-btn-text);
+            background-color: var(--color-btn-gradient-start);
             transition: background-color 0.3s ease;
             font-weight: 600;
         }
 
         .back-button:hover {
-            background-color: #0088a6;
+            background-color: var(--color-btn-gradient-end);
         }
 
         .page-footer {
@@ -111,6 +111,9 @@
                 <li><a href="Dunak.html">Dunak</a></li>
                 <li><a href="kazinskiy.html">Kazinskiy</a></li>
                 <li><a href="drukachuk.html">Drukachuk</a></li>
+                <li>
+                    <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -162,5 +165,6 @@
     <footer class="page-footer">
         <a class="back-button" href="index.html">Back to Team</a>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
