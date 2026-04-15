@@ -2,14 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bohdan's Page</title>
+     <title>Bohdan Kazinskiy — C++ Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { text-align: center; font-family: Arial; padding-top: 50px; background-color: #2b2b2b; color: white; }
-        h1 { color: #d0ff00; }
+        .profile-main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem 2rem;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: var(--color-accent);
+        }
+
+        .profile-header p {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        .profile-section {
+            background-color: var(--color-surface-panel);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-section h2 {
+            margin-top: 0;
+            color: var(--color-accent);
+        }
+
+        .profile-section p {
+            margin-bottom: 0;
+            color: var(--color-text-soft);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: var(--color-surface-skill);
+            border: 1px solid var(--color-border-strong);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .skill-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+            font-size: 1.05rem;
+        }
+
+        .skill-card p {
+            margin: 0;
+            color: var(--color-text-subtle);
+            font-size: 0.95rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--color-text);
+            background-color: var(--color-btn-gradient-start);
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            background-color: var(--color-btn-gradient-end);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding: 0 1rem 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, my name is Bohdan!</h1>
-    <p>It's my personal page for the SoftServe team project.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-title">MBVS Team</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="denisyuk.html">Denysiuk</a></li>
+                <li><a href="Dunak.html">Dunak</a></li>
+                <li><a href="kazinskiy.html" class="active" aria-current="page">Kazinskiy</a></li>
+                <li><a href="drukachuk.html">Drukachuk</a></li>
+            </ul>
+            <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <header class="profile-main profile-header">
+        <h1>Bohdan Kazinskiy</h1>
+        <p>C++ Developer / CS Student</p>
+    </header>
+
+    <main class="profile-main">
+        <section id="about" class="profile-section" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>
+                               I am a Computer Science student with a passion for systems programming and performance-critical applications.
+                I study at university while actively developing my skills in C++ and related tooling. Based in Ukraine,
+                I enjoy solving algorithmic problems and working on lab projects that deepen my understanding of memory models and low-level programming.
+            </p>
+        </section>
+
+        <section id="skills" class="profile-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Variables</h3>
+                    <p>Understanding of fundamental data types, scope, and lifetime in C++.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Arrays</h3>
+                    <p>Static and dynamic array usage, bounds considerations, and std::array/std::vector.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Pointers</h3>
+                    <p>Raw pointers, references, smart pointers, pointer arithmetic, and ownership semantics.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Memory Management</h3>
+                    <p>Manual allocation/deallocation, RAII, resource management, and debugging memory issues.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="profile-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <ul>
+                <li>Lab 1 - Placeholder for a systems programming lab (link coming soon)</li>
+                <li>Lab 2 - Placeholder for an algorithms lab (link coming soon)</li>
+            </ul>
+            <p>Explore the main repository of our team:</p>
+            <a href="https://github.com/Stranick7/softserve-homework" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>&copy; 2026 Bohdan Kazinskiy</p>
+        <p>
+            <a href="index.html" class="back-button">Back to Team</a>
+        </p>
+          </footer>
+    <script src="script.js"></script>
 </body>
 </html>
