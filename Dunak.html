@@ -2,25 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Information about Dunak.V</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: #04026e;
-            text-align: center;
-            padding-top: 100px;
-        }
-        h1 {
-            color: #ff0000;
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalii Dunak - Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, my name is Dunak Vitalii!</h1>
-    <p>It's my personal page for team project SoftServe.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-title">MBVS Team</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="denisyuk.html">Denysiuk</a></li>
+                <li><a href="Dunak.html" class="active" aria-current="page">Dunak</a></li>
+                <li><a href="kazinskiy.html">Kazinskiy</a></li>
+                <li><a href="drukachuk.html">Drukachuk</a></li>
+            </ul>
+            <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <header class="profile-main profile-header" aria-labelledby="profile-title">
+        <h1 id="profile-title">Vitalii Dunak</h1>
+        <p>Junior C++ Developer | Student at KNU</p>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-section" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>
+                I am passionate about software architecture and algorithmic problem solving in C++.
+                I am based in Mykolaiv, Ukraine, and I enjoy developing practical solutions with clean code principles.
+                I enjoy building clear, maintainable code and learning how low-level details shape high-level design decisions.
+                My goal is to grow as an engineer through real team collaboration and consistent practice.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Pointers and Memory</h3>
+                    <p>Confident use of pointers, references, and dynamic memory management in C++.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Object-Oriented Design</h3>
+                    <p>Building modular code with classes, encapsulation, inheritance, and polymorphism.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Tooling</h3>
+                    <p>Daily workflow with Git, GitHub, VS Code, and debugging tools for reliable delivery.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Structured approach to algorithms, clean implementation, and code review improvements.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile-section" aria-labelledby="philosophy-title">
+            <h2 id="philosophy-title">My C++ Philosophy</h2>
+            <p>
+                I follow the principle "clarity before cleverness": explicit ownership, readable interfaces,
+                and predictable behavior first. I prefer RAII and value semantics by default, and I use
+                dynamic allocation only when it gives measurable value.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <p>Explore the main repository of our team:</p>
+            <a href="https://github.com/Stranick7/softserve-homework" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <a class="back-button" href="index.html">Back to Team</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
