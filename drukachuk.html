@@ -2,14 +2,176 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mykola's Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mykola Drukachuk - Profile</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { text-align: center; font-family: Arial; padding-top: 50px; background-color: #2b2b2b; color: white; }
-        h1 { color: #4CAF50; }
+        .profile-main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem 2rem;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: var(--color-accent);
+        }
+
+        .profile-header p {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        .profile-section {
+            background-color: var(--color-surface-panel);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-section h2 {
+            margin-top: 0;
+            color: var(--color-accent);
+        }
+
+        .profile-section p {
+            margin-bottom: 0;
+            color: var(--color-text-soft);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: var(--color-surface-skill);
+            border: 1px solid var(--color-border-strong);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .skill-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+            font-size: 1.05rem;
+        }
+
+        .skill-card p {
+            margin: 0;
+            color: var(--color-text-subtle);
+            font-size: 0.95rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--color-btn-text);
+            background-color: var(--color-btn-gradient-start);
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            background-color: var(--color-btn-gradient-end);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding: 0 1rem 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, my name is Mykola Drukachuk!</h1>
-    <p>It's my personal page for the SoftServe team project.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-title">MBVS Team</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="denisyuk.html">Denysiuk</a></li>
+                <li><a href="Dunak.html">Dunak</a></li>
+                <li><a href="kazinskiy.html">Kazinskiy</a></li>
+                <li><a href="drukachuk.html" class="active" aria-current="page">Drukachuk</a></li>
+            </ul>
+            <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <header class="profile-main profile-header">
+        <h1>Mykola Drukachuk</h1>
+        <p>C++ Learner | Student</p>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-section" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>
+                I am 17 years old and I live in Lutsk, Ukraine. I am a sociable person who enjoys teamwork,
+                communication, and learning together with others. I studied in a military lyceum, which helped
+                me build discipline, responsibility, and a strong work ethic in both study and daily life.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>C++ Fundamentals</h3>
+                    <p>Understanding variables, loops, conditions, functions, and basic data structures.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Step-by-step approach to tasks with focus on clear and maintainable solutions.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Team Collaboration</h3>
+                    <p>Comfortable communication, active participation, and reliable support in group projects.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, and VS Code for practical development and version control workflows.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile-section" aria-labelledby="focus-title">
+            <h2 id="focus-title">My Learning Focus</h2>
+            <p>
+                I focus on writing understandable C++ code first, then improving performance after correctness is achieved.
+                This helps me learn faster and build a strong foundation for more advanced development tasks.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <p>Explore the main repository of our team:</p>
+            <a href="https://github.com/Stranick7/softserve-homework" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <a href="index.html" class="back-button">Back to Team</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

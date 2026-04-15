@@ -2,25 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Information about Dunak.V</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalii Dunak - Profile</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: #04026e;
+        .profile-main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem 2rem;
+        }
+
+        .profile-header {
             text-align: center;
-            padding-top: 100px;
+            margin-bottom: 2rem;
         }
-        h1 {
-            color: #ff0000;
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: var(--color-accent);
         }
-        p {
-            font-size: 18px;
+
+        .profile-header p {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        .profile-section {
+            background-color: var(--color-surface-panel);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-section h2 {
+            margin-top: 0;
+            color: var(--color-accent);
+        }
+
+        .profile-section p {
+            margin-bottom: 0;
+            color: var(--color-text-soft);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: var(--color-surface-skill);
+            border: 1px solid var(--color-border-strong);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .skill-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+            font-size: 1.05rem;
+        }
+
+        .skill-card p {
+            margin: 0;
+            color: var(--color-text-subtle);
+            font-size: 0.95rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--color-btn-text);
+            background-color: var(--color-btn-gradient-start);
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            background-color: var(--color-btn-gradient-end);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding: 0 1rem 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello, my name is Dunak Vitalii!</h1>
-    <p>It's my personal page for team project SoftServe.</p>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <h2 class="nav-title">MBVS Team</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="denisyuk.html">Denysiuk</a></li>
+                <li><a href="Dunak.html" class="active" aria-current="page">Dunak</a></li>
+                <li><a href="kazinskiy.html">Kazinskiy</a></li>
+                <li><a href="drukachuk.html">Drukachuk</a></li>
+            </ul>
+            <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <header class="profile-main profile-header" aria-labelledby="profile-title">
+        <h1 id="profile-title">Vitalii Dunak</h1>
+        <p>Junior C++ Developer | Student at KNU</p>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-section" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>
+                I am passionate about software architecture and algorithmic problem solving in C++.
+                I am based in Mykolaiv, Ukraine, and I enjoy developing practical solutions with clean code principles.
+                I enjoy building clear, maintainable code and learning how low-level details shape high-level design decisions.
+                My goal is to grow as an engineer through real team collaboration and consistent practice.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Pointers and Memory</h3>
+                    <p>Confident use of pointers, references, and dynamic memory management in C++.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Object-Oriented Design</h3>
+                    <p>Building modular code with classes, encapsulation, inheritance, and polymorphism.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Tooling</h3>
+                    <p>Daily workflow with Git, GitHub, VS Code, and debugging tools for reliable delivery.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Structured approach to algorithms, clean implementation, and code review improvements.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile-section" aria-labelledby="philosophy-title">
+            <h2 id="philosophy-title">My C++ Philosophy</h2>
+            <p>
+                I follow the principle "clarity before cleverness": explicit ownership, readable interfaces,
+                and predictable behavior first. I prefer RAII and value semantics by default, and I use
+                dynamic allocation only when it gives measurable value.
+            </p>
+        </section>
+
+        <section class="profile-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <p>Explore the main repository of our team:</p>
+            <a href="https://github.com/Stranick7/softserve-homework" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <a class="back-button" href="index.html">Back to Team</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
