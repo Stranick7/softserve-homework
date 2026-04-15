@@ -2,14 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bohdan's Page</title>
-    <style>
-        body { text-align: center; font-family: Arial; padding-top: 50px; background-color: #2b2b2b; color: white; }
-        h1 { color: #d0ff00; }
-    </style>
+    <title>Bohdan Kazinskiy — C++ Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Hello, my name is Bohdan!</h1>
-    <p>It's my personal page for the SoftServe team project.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Team</a></li>
+            <li><a href="denysiuk.html">Denysiuk</a></li>
+            <li><a href="Dunak.html">Dunak</a></li>
+            <li><a href="drukachuk.html">Drukachuk</a></li>
+            <li><a href="kazinskiy.html" class="active">Kazinskiy</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Bohdan Kazinskiy</h1>
+        <p>C++ Developer / CS Student</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science student with a passion for systems programming and performance-critical applications.
+                I study at university while actively developing my skills in C++ and related tooling. Based in Ukraine,
+                I enjoy solving algorithmic problems and working on lab projects that deepen my understanding of memory models and low-level programming.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Variables</h3>
+                    <p>Understanding of fundamental data types, scope, and lifetime in C++.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Arrays</h3>
+                    <p>Static and dynamic array usage, bounds considerations, and std::array/std::vector.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Pointers</h3>
+                    <p>Raw pointers, references, smart pointers, pointer arithmetic, and ownership semantics.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Memory Management</h3>
+                    <p>Manual allocation/deallocation, RAII, resource management, and debugging memory issues.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Lab 1 — Placeholder for a systems programming lab (link coming soon)</li>
+                <li>Lab 2 — Placeholder for an algorithms lab (link coming soon)</li>
+                <li>GitHub: <a href="#" aria-label="Bohdan's GitHub">Repository coming soon</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bohdan Kazinskiy</p>
+        <p>
+            <a href="index.html" class="button">Back to Team</a>
+        </p>
+    </footer>
 </body>
 </html>
