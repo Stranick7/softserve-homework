@@ -1,0 +1,31 @@
+name: Check index.html and Report
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  check-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+
+      - name: Run check script
+        run: |
+          chmod +x check_index.sh
+          ./check_index.sh
+
+      - name: Update README on main
+        if: success()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git clone https://x-access-token:${{ secrets.ACTION_TOKEN }}@github.com/${{ github.repository }}.git temp_repo
+          cd temp_repo
+          
+          echo -e "\nГілка ${{ github.ref_name }}: index.html exists ✅" >> README.md
+          
+          git add README.md
+          git commit -m "✅ Auto-check: index.html found in ${{ github.ref_name }}"
+          git push origin main
